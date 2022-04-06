@@ -1,0 +1,52 @@
+.one {
+  display: grid; 
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 50px auto 50px;
+}
+.left {
+  background: rgb(240, 215, 75);
+  margin-right: 20px;
+}
+.image {
+  background: url(cub.png);
+  height: 135px;
+  width: 200px;
+  float: left;
+  margin-right: 8px;
+}
+.name {
+  text-align: center;
+}
+.fon {
+  background-image:url(bool.png); background-repeat: repeat-y;
+  background-position: 100% 20%;
+}
+.header,
+.footer {
+  text-align: center;
+  font-size: 25px;
+  grid-column: 1 / 3;
+  background: rgb(168, 168, 235);
+  color: blue;
+}
+@media all and (max-width: 520px) {
+  .one {
+    margin-left: 60px;
+  }
+  .list_ul {
+    list-style: none;
+  }
+  .header,
+  .footer {
+    display: none;
+  }
+  .fon {
+    background-image: none;
+    grid-row-end: 1;
+}
+  .left {
+    background: none;
+    grid-row-end: 2;
+  }
+  
+}
